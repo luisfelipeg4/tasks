@@ -21,7 +21,7 @@ routes.get('/', (req, res, next) => {
 });
 
 /**
- * 
+ * METODO PARA RETORNAR LAS TASK FILTRADAS YA SEA QUE ESTEN CUMPLIDAS O NO 
  */
 routes.get('/:cumplida', (req, res, next) => {
 

@@ -29,22 +29,27 @@
                     <div class="form-control">
 
                         <div>
+                            <!-- FORM PARA AGREGAR UNA NUEVA TAREA -->
                             <form @submit="checkForm">
                                 <h3>AGREGAR UNA NUEVA TAREA</h3>
+                                <!--MENSAJES QUE APARECERAN PARA LA VALIDACION DE CAMPOS -->
                                 <p v-if="validaciones.leght" class="form-control">
                                     <b>Revisar:</b>
                                     <ul>
                                         <li v-for="error in validaciones">{{ error }}</li>
                                     </ul>
                                 </p>
+                                <!--DESCRIPCION DE LA TAREA -->
                                 <p class="form-control">
                                     <label for="descripcion">DESCRIPCION DE TAREA: </label>
                                     <input id="descripcion" v-model="task.descripcion" type="text" name="descripcion">
                                 </p>
+                                <!-- FECHA DE LA TAREA -->
                                 <p class="form-control">
                                     <label for="fecha">FECHA DE TAREA: </label>
                                     <input id="fecha" v-model="task.fecha" type="date" name="fecha">
                                 </p>
+                                <!-- SELECCIONADOR DE LA PRIORIDAD DE LA TAREA-->
                                 <p class="form-control">
                                     <label >ELECCIONE LA PRIORIDAD</label>
                                     <select v-model="option">
@@ -53,7 +58,7 @@
                                         </option>
                                     </select>
                                 </p>
-
+                                <!--BOTÓN PARA EL ENVIO DE LA TAREA -->
                                 <p>
                                     <input type="button" class="btn btn-success" @click="addTask" value="AGREGAR">
                                 </p>
@@ -62,7 +67,7 @@
 
                     </div>
                     <hr>
-
+                    <!-- LISTADO DE TAREAS SIN CUMPLIR-->
                     <h3>TAREAS SIN CUMPLIR</h3>
                     <table class="table table-hover">
                         <thead>
@@ -80,6 +85,7 @@
                             </tr>
                         </tbody>
                     </table>
+                    <!--LISTADO DE TAREAS CUMPLIDAS-->
                     <h3>TAREAS CUMPLIDAS</h3>
                     <table class="table table-hover">
                         <thead>
