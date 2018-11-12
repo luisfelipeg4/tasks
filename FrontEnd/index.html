@@ -30,6 +30,7 @@
 
                         <div>
                             <form @submit="checkForm">
+                                <h3>AGREGAR UNA NUEVA TAREA</h3>
                                 <p v-if="validaciones.leght">
                                     <b>Revisar:</b>
                                     <ul>
@@ -42,7 +43,7 @@
                                 </p>
                                 <p>
                                     <label for="fecha">Fecha</label>
-                                    <input id="fecha" v-model="task.fecha" type="date" name="fecha" min="0">
+                                    <input id="fecha" v-model="task.fecha" type="date" name="fecha" >
                                 </p>
                                 <p>
                                     <select v-model="option">

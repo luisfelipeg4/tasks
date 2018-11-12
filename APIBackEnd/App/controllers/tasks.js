@@ -9,7 +9,7 @@ routes.use(express.json())
  */
 routes.get('/', (req, res, next) => {
 
-    service.postgres().select("select id, descripcion, TO_CHAR(NOW() :: DATE, 'Mon dd, yyyy') as fecha, prioridad, lista from tasks order by Fecha ASC").then(function (respuesta) {
+    service.postgres().select("select id, descripcion, TO_CHAR(fecha :: DATE, 'Mon dd, yyyy') as fecha, prioridad, lista from tasks order by Fecha ASC").then(function (respuesta) {
         //lo que quiero hacer si recibo algo
         console.log(respuesta);
         res.send(respuesta);
@@ -26,7 +26,7 @@ routes.get('/', (req, res, next) => {
 routes.get('/:cumplida', (req, res, next) => {
 
     var filtro = req.params.cumplida
-    service.postgres().select("select id, descripcion,  TO_CHAR(NOW() :: DATE, 'Mon dd, yyyy') as fecha, prioridad, lista from tasks where lista = " + filtro+ " order by Fecha ASC").then(function (respuesta) {
+    service.postgres().select("select id, descripcion,  TO_CHAR(fecha :: DATE, 'Mon dd, yyyy') as fecha, prioridad, lista from tasks where lista = " + filtro+ " order by Fecha ASC").then(function (respuesta) {
         //lo que quiero hacer si recibo algo
         console.log(respuesta);
         res.send(respuesta);
