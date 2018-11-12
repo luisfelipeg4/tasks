@@ -12,8 +12,8 @@ new Vue({
       validaciones: [],
       descripcion: null,
       fecha: null,
-      prioridad: 'ALTA',
     }],
+    option: 'ALTA',
     options: [
       { text: 'PRIORIDAD ALTA', value: 'ALTA' },
       { text: 'PRIORIDAD MEDIA', value: 'MEDIA' },
@@ -69,12 +69,13 @@ new Vue({
         axios.post('http://localhost:3000/tasks', {
           descripcion: this.task.descripcion,
           fecha: this.task.fecha,
-          prioridad: this.task.prioridad
+          prioridad: this.option
         })
           .then(res => {
             console.log("Agregado")
             console.log(res)
-
+            this.task.descripcion= null
+            this.task.fecha =null            
             this.getTasksCheked();
             this.getTasksUnCheked();
           }).catch(res => {
@@ -95,11 +96,6 @@ new Vue({
       if (!this.validaciones.length) {
         return true;
       }
-    }
-  },
-  computed: {
-    searchUser: function () {
-      return this.tasks.filter(item.lista);
     }
   }
 });
