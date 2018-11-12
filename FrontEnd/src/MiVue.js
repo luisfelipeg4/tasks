@@ -86,15 +86,13 @@ new Vue({
      */
     addTask: function () {
       if (this.checkForm() == true) {
-        
+
         axios.post('http://localhost:3000/tasks', {
           descripcion: this.task.descripcion,
           fecha: this.task.fecha,
           prioridad: this.option
         })
           .then(res => {
-            console.log("Agregado")
-            console.log(res)
             this.task.descripcion= null
             this.task.fecha =null            
             this.getTasksCheked();
