@@ -21,6 +21,6 @@ para el uso del cors correr el comando npm install cors
 
 # FronEnd 
 
-- revelar en el explorador el archivo index.html y asegurarse que el Api  ya este en funcionamiento
+- revelar en el explorador el archivo index.html que se encuentra en la carpeta frontEnd y asegurarse que el Api  ya este en funcionamiento
 
 
