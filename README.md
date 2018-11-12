@@ -5,5 +5,20 @@ en nodeJs utilizando express.
 
 para el FrontEnd se utiliza Html Basico, Bootstrap para el estilo y el framework VueJs
 
-#Backend
+# Backend
+
+- Crear una tabla Llamada task con los siguientes campos id numeric, descripcion text ,fecha date ,lista boolean ,prioridad text 
+
+- Correr el BackEnd con
+cd APIBackEnd
+nodemon server.js
+
+Si no se tiene instalado correr el comando npm install nodemon 
+
+para el uso del cors correr el comando npm install cors
+
+# FronEnd 
+
+- 
+
 
