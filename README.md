@@ -19,7 +19,7 @@ Si no se tiene instalado correr el comando npm install nodemon
 
 para el uso del cors correr el comando npm install cors
 
-# FronEnd 
+# FrontEnd 
 
 - revelar en el explorador el archivo index.html que se encuentra en la carpeta frontEnd y asegurarse que el Api  ya este en funcionamiento
 -se utiliza axios para la conexion entre BackEnd y FrontEnd
